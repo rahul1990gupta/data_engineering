@@ -1,5 +1,5 @@
 from datetime import datetime
-from db_utils import insert_weather_data
+from hourly_weather import insert_weather_data
 import requests
 import os
 from dotenv import load_dotenv
@@ -37,3 +37,4 @@ def fetch_and_store_weather(city: str, date: str):
         print(f"Weather data for {city} on {date} has been inserted into the database.")
     except requests.exceptions.RequestException as e:
         print(f"Failed to fetch data: {e}")
+        

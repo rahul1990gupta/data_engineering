@@ -1,12 +1,38 @@
-import typer
-from weather_utils import fetch_and_store_weather
+import sqlite3
 
-app = typer.Typer()
 
-@app.command()
-def fetch_weather(city: str, date: str):
-    
-    fetch_and_store_weather(city, date)
+def insert_weather_data(data):
+    conn = sqlite3.connect('weather_data.db')
+    cursor = conn.cursor()
 
-if __name__ == "__main__":
-    app()
+    location = data['location']
+    forecast = data['forecast']['forecastday']
+
+    for forecast_day in forecast:
+        date = forecast_day['date']
+        
+        
+        for hour_data in forecast_day['hour']:
+            temp = hour_data['temp_c']
+            humidity = hour_data['humidity']
+
+
+            time = hour_data['time']
+            condition = hour_data['condition']['text']
+            localtime = location['localtime']
+
+            cursor.execute("""
+            INSERT INTO weather (date, time, temperature, condition, humidity,
+                location_name, region, country, latitude, longitude, local_time)
+            SELECT ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?
+            WHERE NOT EXISTS (
+                SELECT 1 FROM weather WHERE date = ? AND time = ? AND location_name = ?
+            )
+            """, (date, time, temp, condition, humidity,
+                  location['name'], location['region'], location['country'],
+                  location['lat'], location['lon'], localtime,
+                  date, time, location['name']))
+
+    conn.commit()
+    conn.close()
+
