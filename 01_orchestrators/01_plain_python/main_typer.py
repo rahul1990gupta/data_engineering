@@ -14,12 +14,12 @@ def fetch_weather(city: str, date: str):
 @app.command()
 def fetch_daily_weather(city: str):
     
-    fetch_day_average(city.capitalize())    
+    fetch_day_average(city.title())    
 
 @app.command()
 def global_average(city: str):
     
-    fetch_global_average(city.capitalize())    
+    fetch_global_average(city.title())    
 
 if __name__ == "__main__":
     create_table()
