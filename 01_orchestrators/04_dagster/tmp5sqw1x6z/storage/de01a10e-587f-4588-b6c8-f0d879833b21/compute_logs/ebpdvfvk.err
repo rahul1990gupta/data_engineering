@@ -1,0 +1,9 @@
+[32m2025-01-21 11:48:21 +0000[0m - dagster - [34mDEBUG[0m - __ASSET_JOB - de01a10e-587f-4588-b6c8-f0d879833b21 - 552616 - LOGS_CAPTURED - Started capturing logs in process (pid: 552616).
+[32m2025-01-21 11:48:21 +0000[0m - dagster - [34mDEBUG[0m - __ASSET_JOB - de01a10e-587f-4588-b6c8-f0d879833b21 - 552616 - setup_database - STEP_START - Started execution of step "setup_database".
+INFO:weather_project.assets:Creating database tables...
+INFO:weather_project.assets:Database tables created successfully.
+[32m2025-01-21 11:48:22 +0000[0m - dagster - [34mDEBUG[0m - __ASSET_JOB - de01a10e-587f-4588-b6c8-f0d879833b21 - 552616 - setup_database - STEP_OUTPUT - Yielded output "result" of type "Nothing". (Type check passed).
+INFO:alembic.runtime.migration:Context impl SQLiteImpl.
+INFO:alembic.runtime.migration:Will assume non-transactional DDL.
+[32m2025-01-21 11:48:23 +0000[0m - dagster - [34mDEBUG[0m - __ASSET_JOB - de01a10e-587f-4588-b6c8-f0d879833b21 - 552616 - setup_database - ASSET_MATERIALIZATION - Materialized value setup_database.
+[32m2025-01-21 11:48:23 +0000[0m - dagster - [34mDEBUG[0m - __ASSET_JOB - de01a10e-587f-4588-b6c8-f0d879833b21 - 552616 - setup_database - STEP_SUCCESS - Finished execution of step "setup_database" in 1.33s.

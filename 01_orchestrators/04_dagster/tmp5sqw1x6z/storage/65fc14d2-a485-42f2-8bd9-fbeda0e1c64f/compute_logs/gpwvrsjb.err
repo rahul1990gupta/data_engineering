@@ -1,0 +1,28 @@
+[32m2025-01-21 11:39:25 +0000[0m - dagster - [34mDEBUG[0m - __ASSET_JOB - 65fc14d2-a485-42f2-8bd9-fbeda0e1c64f - 537555 - LOGS_CAPTURED - Started capturing logs in process (pid: 537555).
+[32m2025-01-21 11:39:25 +0000[0m - dagster - [34mDEBUG[0m - __ASSET_JOB - 65fc14d2-a485-42f2-8bd9-fbeda0e1c64f - 537555 - fetch_daily_weather - STEP_START - Started execution of step "fetch_daily_weather".
+INFO:alembic.runtime.migration:Context impl SQLiteImpl.
+INFO:alembic.runtime.migration:Will assume non-transactional DDL.
+INFO:weather_project.assets:Fetching daily average weather for Bhopal...
+INFO:weather_project.assets:Daily average weather for Bhopal fetched successfully.
+[32m2025-01-21 11:39:26 +0000[0m - dagster - [34mERROR[0m - [31m__ASSET_JOB - 65fc14d2-a485-42f2-8bd9-fbeda0e1c64f - 537555 - fetch_daily_weather - STEP_FAILURE - Execution of step "fetch_daily_weather" failed.
+
+dagster._core.errors.DagsterExecutionStepExecutionError: Error occurred while executing op "fetch_daily_weather"::
+
+TypeError: AssetResult.__new__() got an unexpected keyword argument 'value'
+
+Stack Trace:
+  File "/home/user_123/dagster_env/lib/python3.12/site-packages/dagster/_core/execution/plan/utils.py", line 55, in op_execution_error_boundary
+    yield
+  File "/home/user_123/dagster_env/lib/python3.12/site-packages/dagster/_utils/__init__.py", line 480, in iterate_with_context
+    next_output = next(iterator)
+                  ^^^^^^^^^^^^^^
+  File "/home/user_123/dagster_env/lib/python3.12/site-packages/dagster/_core/execution/plan/compute_generator.py", line 127, in _coerce_op_compute_fn_to_iterator
+    result = invoke_compute_fn(
+             ^^^^^^^^^^^^^^^^^^
+  File "/home/user_123/dagster_env/lib/python3.12/site-packages/dagster/_core/execution/plan/compute_generator.py", line 115, in invoke_compute_fn
+    return fn(context, **args_to_pass) if context_arg_provided else fn(**args_to_pass)
+                                                                    ^^^^^^^^^^^^^^^^^^
+  File "/mnt/h/wsl_dagster/weather_project/weather_project/assets.py", line 72, in fetch_daily_weather
+    return MaterializeResult(
+           ^^^^^^^^^^^^^^^^^^
+[0m

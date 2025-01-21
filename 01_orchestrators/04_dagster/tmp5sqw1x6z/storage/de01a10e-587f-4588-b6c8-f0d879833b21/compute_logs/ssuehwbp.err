@@ -1,0 +1,11 @@
+[32m2025-01-21 11:48:40 +0000[0m - dagster - [34mDEBUG[0m - __ASSET_JOB - de01a10e-587f-4588-b6c8-f0d879833b21 - 553229 - LOGS_CAPTURED - Started capturing logs in process (pid: 553229).
+[32m2025-01-21 11:48:41 +0000[0m - dagster - [34mDEBUG[0m - __ASSET_JOB - de01a10e-587f-4588-b6c8-f0d879833b21 - 553229 - global_weather - STEP_START - Started execution of step "global_weather".
+INFO:alembic.runtime.migration:Context impl SQLiteImpl.
+INFO:alembic.runtime.migration:Will assume non-transactional DDL.
+INFO:weather_project.assets:Fetching global average weather for Bhopal...
+INFO:weather_project.assets:Global average weather for Bhopal fetched successfully.
+[32m2025-01-21 11:48:42 +0000[0m - dagster - [34mDEBUG[0m - __ASSET_JOB - de01a10e-587f-4588-b6c8-f0d879833b21 - 553229 - global_weather - STEP_OUTPUT - Yielded output "result" of type "Any". (Type check passed).
+[32m2025-01-21 11:48:42 +0000[0m - dagster - [34mDEBUG[0m - __ASSET_JOB - de01a10e-587f-4588-b6c8-f0d879833b21 - global_weather - Writing file at: /mnt/h/wsl_dagster/weather_project/tmp5sqw1x6z/storage/global_weather using PickledObjectFilesystemIOManager...
+[32m2025-01-21 11:48:43 +0000[0m - dagster - [34mDEBUG[0m - __ASSET_JOB - de01a10e-587f-4588-b6c8-f0d879833b21 - 553229 - global_weather - ASSET_MATERIALIZATION - Materialized value global_weather.
+[32m2025-01-21 11:48:43 +0000[0m - dagster - [34mDEBUG[0m - __ASSET_JOB - de01a10e-587f-4588-b6c8-f0d879833b21 - 553229 - global_weather - HANDLED_OUTPUT - Handled output "result" using IO manager "io_manager"
+[32m2025-01-21 11:48:43 +0000[0m - dagster - [34mDEBUG[0m - __ASSET_JOB - de01a10e-587f-4588-b6c8-f0d879833b21 - 553229 - global_weather - STEP_SUCCESS - Finished execution of step "global_weather" in 2.47s.

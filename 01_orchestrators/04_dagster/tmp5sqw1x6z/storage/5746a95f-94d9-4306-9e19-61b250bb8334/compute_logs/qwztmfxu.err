@@ -1,0 +1,28 @@
+[32m2025-01-21 10:14:56 +0000[0m - dagster - [34mDEBUG[0m - __ASSET_JOB - 5746a95f-94d9-4306-9e19-61b250bb8334 - 414620 - LOGS_CAPTURED - Started capturing logs in process (pid: 414620).
+[32m2025-01-21 10:14:56 +0000[0m - dagster - [34mDEBUG[0m - __ASSET_JOB - 5746a95f-94d9-4306-9e19-61b250bb8334 - 414620 - fetch_weather - STEP_START - Started execution of step "fetch_weather".
+INFO:alembic.runtime.migration:Context impl SQLiteImpl.
+INFO:alembic.runtime.migration:Will assume non-transactional DDL.
+INFO:weather_project.assets:Fetching weather for Pune on 2025-01-15...
+INFO:weather_project.assets:Weather data for Pune on 2025-01-15 fetched and stored successfully.
+[32m2025-01-21 10:15:08 +0000[0m - dagster - [34mERROR[0m - [31m__ASSET_JOB - 5746a95f-94d9-4306-9e19-61b250bb8334 - 414620 - fetch_weather - STEP_FAILURE - Execution of step "fetch_weather" failed.
+
+dagster._core.errors.DagsterExecutionStepExecutionError: Error occurred while executing op "fetch_weather"::
+
+TypeError: 'NoneType' object is not subscriptable
+
+Stack Trace:
+  File "/home/user_123/dagster_env/lib/python3.12/site-packages/dagster/_core/execution/plan/utils.py", line 55, in op_execution_error_boundary
+    yield
+  File "/home/user_123/dagster_env/lib/python3.12/site-packages/dagster/_utils/__init__.py", line 480, in iterate_with_context
+    next_output = next(iterator)
+                  ^^^^^^^^^^^^^^
+  File "/home/user_123/dagster_env/lib/python3.12/site-packages/dagster/_core/execution/plan/compute_generator.py", line 127, in _coerce_op_compute_fn_to_iterator
+    result = invoke_compute_fn(
+             ^^^^^^^^^^^^^^^^^^
+  File "/home/user_123/dagster_env/lib/python3.12/site-packages/dagster/_core/execution/plan/compute_generator.py", line 115, in invoke_compute_fn
+    return fn(context, **args_to_pass) if context_arg_provided else fn(**args_to_pass)
+                                                                    ^^^^^^^^^^^^^^^^^^
+  File "/mnt/h/wsl_dagster/weather_project/weather_project/assets.py", line 46, in fetch_weather
+    hours_data = weather_data['forecast']['forecastday'][0]['hour']
+                 ~~~~~~~~~~~~^^^^^^^^^^^^
+[0m

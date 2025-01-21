@@ -1,0 +1,9 @@
+[32m2025-01-21 11:27:38 +0000[0m - dagster - [34mDEBUG[0m - __ASSET_JOB - a5c69882-07ff-4a2a-a2d5-312a8cf95edb - 517610 - LOGS_CAPTURED - Started capturing logs in process (pid: 517610).
+[32m2025-01-21 11:27:39 +0000[0m - dagster - [34mDEBUG[0m - __ASSET_JOB - a5c69882-07ff-4a2a-a2d5-312a8cf95edb - 517610 - global_weather - STEP_START - Started execution of step "global_weather".
+INFO:alembic.runtime.migration:Context impl SQLiteImpl.
+INFO:alembic.runtime.migration:Will assume non-transactional DDL.
+INFO:weather_project.assets:Fetching global average weather for Pune...
+INFO:weather_project.assets:Global average weather for Pune fetched successfully.
+[32m2025-01-21 11:27:40 +0000[0m - dagster - [34mDEBUG[0m - __ASSET_JOB - a5c69882-07ff-4a2a-a2d5-312a8cf95edb - 517610 - global_weather - STEP_OUTPUT - Yielded output "result" of type "Any". (Type check passed).
+[32m2025-01-21 11:27:41 +0000[0m - dagster - [34mDEBUG[0m - __ASSET_JOB - a5c69882-07ff-4a2a-a2d5-312a8cf95edb - 517610 - global_weather - ASSET_MATERIALIZATION - Materialized value global_weather.
+[32m2025-01-21 11:27:41 +0000[0m - dagster - [34mDEBUG[0m - __ASSET_JOB - a5c69882-07ff-4a2a-a2d5-312a8cf95edb - 517610 - global_weather - STEP_SUCCESS - Finished execution of step "global_weather" in 2.31s.

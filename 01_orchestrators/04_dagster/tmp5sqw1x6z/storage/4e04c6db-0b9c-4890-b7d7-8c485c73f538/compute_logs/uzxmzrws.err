@@ -1,0 +1,12 @@
+[32m2025-01-21 09:12:27 +0000[0m - dagster - [34mDEBUG[0m - __ASSET_JOB - 4e04c6db-0b9c-4890-b7d7-8c485c73f538 - 311495 - LOGS_CAPTURED - Started capturing logs in process (pid: 311495).
+[32m2025-01-21 09:12:28 +0000[0m - dagster - [34mDEBUG[0m - __ASSET_JOB - 4e04c6db-0b9c-4890-b7d7-8c485c73f538 - 311495 - fetch_weather - STEP_START - Started execution of step "fetch_weather".
+INFO:alembic.runtime.migration:Context impl SQLiteImpl.
+INFO:alembic.runtime.migration:Will assume non-transactional DDL.
+[32m2025-01-21 09:12:28 +0000[0m - dagster - [34mDEBUG[0m - __ASSET_JOB - 4e04c6db-0b9c-4890-b7d7-8c485c73f538 - fetch_weather - Loading file from: /mnt/h/wsl_dagster/weather_project/tmp5sqw1x6z/storage/setup_database using PickledObjectFilesystemIOManager...
+[32m2025-01-21 09:12:29 +0000[0m - dagster - [34mDEBUG[0m - __ASSET_JOB - 4e04c6db-0b9c-4890-b7d7-8c485c73f538 - 311495 - fetch_weather - LOADED_INPUT - Loaded input "setup_database" using input manager "io_manager"
+[32m2025-01-21 09:12:29 +0000[0m - dagster - [34mDEBUG[0m - __ASSET_JOB - 4e04c6db-0b9c-4890-b7d7-8c485c73f538 - 311495 - fetch_weather - STEP_INPUT - Got input "setup_database" of type "Any". (Type check passed).
+INFO:weather_project.assets:Fetching weather for Pune on 2025-01-15...
+INFO:weather_project.assets:Weather data for Pune on 2025-01-15 fetched and stored successfully.
+[32m2025-01-21 09:12:30 +0000[0m - dagster - [34mDEBUG[0m - __ASSET_JOB - 4e04c6db-0b9c-4890-b7d7-8c485c73f538 - 311495 - fetch_weather - STEP_OUTPUT - Yielded output "result" of type "Any". (Type check passed).
+[32m2025-01-21 09:12:31 +0000[0m - dagster - [34mDEBUG[0m - __ASSET_JOB - 4e04c6db-0b9c-4890-b7d7-8c485c73f538 - 311495 - fetch_weather - ASSET_MATERIALIZATION - Materialized value fetch_weather.
+[32m2025-01-21 09:12:31 +0000[0m - dagster - [34mDEBUG[0m - __ASSET_JOB - 4e04c6db-0b9c-4890-b7d7-8c485c73f538 - 311495 - fetch_weather - STEP_SUCCESS - Finished execution of step "fetch_weather" in 3.34s.

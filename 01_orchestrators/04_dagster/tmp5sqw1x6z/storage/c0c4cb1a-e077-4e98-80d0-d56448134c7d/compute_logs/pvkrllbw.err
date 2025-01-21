@@ -1,0 +1,14 @@
+[32m2025-01-21 09:38:41 +0000[0m - dagster - [34mDEBUG[0m - __ASSET_JOB - c0c4cb1a-e077-4e98-80d0-d56448134c7d - 355387 - LOGS_CAPTURED - Started capturing logs in process (pid: 355387).
+[32m2025-01-21 09:38:41 +0000[0m - dagster - [34mDEBUG[0m - __ASSET_JOB - c0c4cb1a-e077-4e98-80d0-d56448134c7d - 355387 - fetch_weather - STEP_START - Started execution of step "fetch_weather".
+INFO:alembic.runtime.migration:Context impl SQLiteImpl.
+INFO:alembic.runtime.migration:Will assume non-transactional DDL.
+[32m2025-01-21 09:38:42 +0000[0m - dagster - [34mDEBUG[0m - __ASSET_JOB - c0c4cb1a-e077-4e98-80d0-d56448134c7d - fetch_weather - Loading file from: /mnt/h/wsl_dagster/weather_project/tmp5sqw1x6z/storage/setup_database using PickledObjectFilesystemIOManager...
+[32m2025-01-21 09:38:42 +0000[0m - dagster - [34mDEBUG[0m - __ASSET_JOB - c0c4cb1a-e077-4e98-80d0-d56448134c7d - 355387 - fetch_weather - LOADED_INPUT - Loaded input "setup_database" using input manager "io_manager", from output "result" of step "setup_database"
+[32m2025-01-21 09:38:43 +0000[0m - dagster - [34mDEBUG[0m - __ASSET_JOB - c0c4cb1a-e077-4e98-80d0-d56448134c7d - 355387 - fetch_weather - STEP_INPUT - Got input "setup_database" of type "Any". (Type check passed).
+INFO:weather_project.assets:Fetching weather for Pune on 2025-01-15...
+INFO:weather_project.assets:Weather data for Pune on 2025-01-15 fetched and stored successfully.
+[32m2025-01-21 09:38:43 +0000[0m - dagster - [34mDEBUG[0m - __ASSET_JOB - c0c4cb1a-e077-4e98-80d0-d56448134c7d - 355387 - fetch_weather - STEP_OUTPUT - Yielded output "result" of type "Any". (Type check passed).
+[32m2025-01-21 09:38:42 +0000[0m - dagster - [34mDEBUG[0m - __ASSET_JOB - c0c4cb1a-e077-4e98-80d0-d56448134c7d - fetch_weather - Writing file at: /mnt/h/wsl_dagster/weather_project/tmp5sqw1x6z/storage/fetch_weather using PickledObjectFilesystemIOManager...
+[32m2025-01-21 09:38:43 +0000[0m - dagster - [34mDEBUG[0m - __ASSET_JOB - c0c4cb1a-e077-4e98-80d0-d56448134c7d - 355387 - fetch_weather - ASSET_MATERIALIZATION - Materialized value fetch_weather.
+[32m2025-01-21 09:38:43 +0000[0m - dagster - [34mDEBUG[0m - __ASSET_JOB - c0c4cb1a-e077-4e98-80d0-d56448134c7d - 355387 - fetch_weather - HANDLED_OUTPUT - Handled output "result" using IO manager "io_manager"
+[32m2025-01-21 09:38:44 +0000[0m - dagster - [34mDEBUG[0m - __ASSET_JOB - c0c4cb1a-e077-4e98-80d0-d56448134c7d - 355387 - fetch_weather - STEP_SUCCESS - Finished execution of step "fetch_weather" in 3.53s.

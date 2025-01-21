@@ -1,0 +1,11 @@
+[32m2025-01-21 10:49:27 +0000[0m - dagster - [34mDEBUG[0m - __ASSET_JOB - d6f18f74-d2be-4adf-8bdd-3f239239e59c - 466907 - LOGS_CAPTURED - Started capturing logs in process (pid: 466907).
+[32m2025-01-21 10:49:27 +0000[0m - dagster - [34mDEBUG[0m - __ASSET_JOB - d6f18f74-d2be-4adf-8bdd-3f239239e59c - 466907 - fetch_daily_weather - STEP_START - Started execution of step "fetch_daily_weather".
+INFO:alembic.runtime.migration:Context impl SQLiteImpl.
+INFO:alembic.runtime.migration:Will assume non-transactional DDL.
+INFO:weather_project.assets:Fetching daily average weather for Pune...
+INFO:weather_project.assets:Daily average weather for Pune fetched successfully.
+[32m2025-01-21 10:49:28 +0000[0m - dagster - [34mDEBUG[0m - __ASSET_JOB - d6f18f74-d2be-4adf-8bdd-3f239239e59c - 466907 - fetch_daily_weather - STEP_OUTPUT - Yielded output "result" of type "Any". (Type check passed).
+[32m2025-01-21 10:49:28 +0000[0m - dagster - [34mDEBUG[0m - __ASSET_JOB - d6f18f74-d2be-4adf-8bdd-3f239239e59c - fetch_daily_weather - Writing file at: /mnt/h/wsl_dagster/weather_project/tmp5sqw1x6z/storage/fetch_daily_weather using PickledObjectFilesystemIOManager...
+[32m2025-01-21 10:49:29 +0000[0m - dagster - [34mDEBUG[0m - __ASSET_JOB - d6f18f74-d2be-4adf-8bdd-3f239239e59c - 466907 - fetch_daily_weather - ASSET_MATERIALIZATION - Materialized value fetch_daily_weather.
+[32m2025-01-21 10:49:30 +0000[0m - dagster - [34mDEBUG[0m - __ASSET_JOB - d6f18f74-d2be-4adf-8bdd-3f239239e59c - 466907 - fetch_daily_weather - HANDLED_OUTPUT - Handled output "result" using IO manager "io_manager"
+[32m2025-01-21 10:49:30 +0000[0m - dagster - [34mDEBUG[0m - __ASSET_JOB - d6f18f74-d2be-4adf-8bdd-3f239239e59c - 466907 - fetch_daily_weather - STEP_SUCCESS - Finished execution of step "fetch_daily_weather" in 2.46s.

@@ -1,0 +1,9 @@
+[32m2025-01-21 11:48:28 +0000[0m - dagster - [34mDEBUG[0m - __ASSET_JOB - de01a10e-587f-4588-b6c8-f0d879833b21 - 552808 - LOGS_CAPTURED - Started capturing logs in process (pid: 552808).
+[32m2025-01-21 11:48:28 +0000[0m - dagster - [34mDEBUG[0m - __ASSET_JOB - de01a10e-587f-4588-b6c8-f0d879833b21 - 552808 - fetch_weather - STEP_START - Started execution of step "fetch_weather".
+INFO:alembic.runtime.migration:Context impl SQLiteImpl.
+INFO:alembic.runtime.migration:Will assume non-transactional DDL.
+INFO:weather_project.assets:Fetching weather for Bhopal on 2025-01-19...
+INFO:weather_project.assets:Weather data for Bhopal on 2025-01-19 fetched and stored successfully.
+[32m2025-01-21 11:48:30 +0000[0m - dagster - [34mDEBUG[0m - __ASSET_JOB - de01a10e-587f-4588-b6c8-f0d879833b21 - 552808 - fetch_weather - STEP_OUTPUT - Yielded output "result" of type "Any". (Type check passed).
+[32m2025-01-21 11:48:31 +0000[0m - dagster - [34mDEBUG[0m - __ASSET_JOB - de01a10e-587f-4588-b6c8-f0d879833b21 - 552808 - fetch_weather - ASSET_MATERIALIZATION - Materialized value fetch_weather.
+[32m2025-01-21 11:48:31 +0000[0m - dagster - [34mDEBUG[0m - __ASSET_JOB - de01a10e-587f-4588-b6c8-f0d879833b21 - 552808 - fetch_weather - STEP_SUCCESS - Finished execution of step "fetch_weather" in 2.58s.

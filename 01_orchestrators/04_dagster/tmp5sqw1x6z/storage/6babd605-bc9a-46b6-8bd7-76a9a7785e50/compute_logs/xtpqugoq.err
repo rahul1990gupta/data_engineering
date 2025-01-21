@@ -1,0 +1,33 @@
+[32m2025-01-21 09:21:03 +0000[0m - dagster - [34mDEBUG[0m - __ASSET_JOB - 6babd605-bc9a-46b6-8bd7-76a9a7785e50 - 325913 - LOGS_CAPTURED - Started capturing logs in process (pid: 325913).
+[32m2025-01-21 09:21:03 +0000[0m - dagster - [34mDEBUG[0m - __ASSET_JOB - 6babd605-bc9a-46b6-8bd7-76a9a7785e50 - 325913 - fetch_daily_weather - STEP_START - Started execution of step "fetch_daily_weather".
+INFO:alembic.runtime.migration:Context impl SQLiteImpl.
+INFO:alembic.runtime.migration:Will assume non-transactional DDL.
+[32m2025-01-21 09:21:04 +0000[0m - dagster - [34mDEBUG[0m - __ASSET_JOB - 6babd605-bc9a-46b6-8bd7-76a9a7785e50 - fetch_daily_weather - Loading file from: /mnt/h/wsl_dagster/weather_project/tmp5sqw1x6z/storage/fetch_weather using PickledObjectFilesystemIOManager...
+[32m2025-01-21 09:21:04 +0000[0m - dagster - [34mERROR[0m - [31m__ASSET_JOB - 6babd605-bc9a-46b6-8bd7-76a9a7785e50 - 325913 - fetch_daily_weather - STEP_FAILURE - Execution of step "fetch_daily_weather" failed.
+
+dagster._core.errors.DagsterExecutionLoadInputError: Error occurred while loading input "fetch_weather" of step "fetch_daily_weather"::
+
+FileNotFoundError: [Errno 2] No such file or directory: '/mnt/h/wsl_dagster/weather_project/tmp5sqw1x6z/storage/fetch_weather'
+
+Stack Trace:
+  File "/home/user_123/dagster_env/lib/python3.12/site-packages/dagster/_core/execution/plan/utils.py", line 55, in op_execution_error_boundary
+    yield
+  File "/home/user_123/dagster_env/lib/python3.12/site-packages/dagster/_core/execution/plan/inputs.py", line 621, in _load_input_with_input_manager
+    value = input_manager.load_input(context)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user_123/dagster_env/lib/python3.12/site-packages/dagster/_core/storage/upath_io_manager.py", line 406, in load_input
+    return self._load_single_input(path, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user_123/dagster_env/lib/python3.12/site-packages/dagster/_core/storage/upath_io_manager.py", line 273, in _load_single_input
+    obj = self.load_from_path(context=context, path=path)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user_123/dagster_env/lib/python3.12/site-packages/dagster/_core/storage/fs_io_manager.py", line 283, in load_from_path
+    with path.open("rb") as file:
+         ^^^^^^^^^^^^^^^
+  File "/home/user_123/dagster_env/lib/python3.12/site-packages/upath/implementations/local.py", line 134, in open
+    return PosixPath.open(self, mode, buffering, encoding, errors, newline)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/pathlib.py", line 1015, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[0m
