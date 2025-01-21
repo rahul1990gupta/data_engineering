@@ -29,7 +29,7 @@ def insert_weather_data(data):
                 SELECT 1 FROM weather WHERE date = ? AND time = ? AND location_name = ?
             )
             """, (date, time, temp, condition, humidity,
-                  location['name'], location['region'], location['country'],
+                  location['name'].title(), location['region'], location['country'],
                   location['lat'], location['lon'], localtime,
                   date, time, location['name']))
 
