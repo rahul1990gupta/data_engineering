@@ -1,0 +1,14 @@
+[32m2025-01-21 08:08:09 +0000[0m - dagster - [34mDEBUG[0m - __ASSET_JOB - 6443b292-4a2e-4b98-9966-07757f8ebeeb - 231352 - LOGS_CAPTURED - Started capturing logs in process (pid: 231352).
+[32m2025-01-21 08:08:09 +0000[0m - dagster - [34mDEBUG[0m - __ASSET_JOB - 6443b292-4a2e-4b98-9966-07757f8ebeeb - 231352 - global_weather - STEP_START - Started execution of step "global_weather".
+INFO:alembic.runtime.migration:Context impl SQLiteImpl.
+INFO:alembic.runtime.migration:Will assume non-transactional DDL.
+[32m2025-01-21 08:08:10 +0000[0m - dagster - [34mDEBUG[0m - __ASSET_JOB - 6443b292-4a2e-4b98-9966-07757f8ebeeb - global_weather - Loading file from: /mnt/h/wsl_dagster/weather_project/tmppe2fye5b/storage/fetch_daily_weather using PickledObjectFilesystemIOManager...
+[32m2025-01-21 08:08:10 +0000[0m - dagster - [34mDEBUG[0m - __ASSET_JOB - 6443b292-4a2e-4b98-9966-07757f8ebeeb - 231352 - global_weather - LOADED_INPUT - Loaded input "fetch_daily_weather" using input manager "io_manager", from output "result" of step "fetch_daily_weather"
+[32m2025-01-21 08:08:10 +0000[0m - dagster - [34mDEBUG[0m - __ASSET_JOB - 6443b292-4a2e-4b98-9966-07757f8ebeeb - 231352 - global_weather - STEP_INPUT - Got input "fetch_daily_weather" of type "Any". (Type check passed).
+INFO:weather_project.assets:Fetching global average weather for Mumbai...
+INFO:weather_project.assets:Global average weather for Mumbai fetched successfully.
+[32m2025-01-21 08:08:11 +0000[0m - dagster - [34mDEBUG[0m - __ASSET_JOB - 6443b292-4a2e-4b98-9966-07757f8ebeeb - 231352 - global_weather - STEP_OUTPUT - Yielded output "result" of type "Any". (Type check passed).
+[32m2025-01-21 08:08:11 +0000[0m - dagster - [34mDEBUG[0m - __ASSET_JOB - 6443b292-4a2e-4b98-9966-07757f8ebeeb - global_weather - Writing file at: /mnt/h/wsl_dagster/weather_project/tmppe2fye5b/storage/global_weather using PickledObjectFilesystemIOManager...
+[32m2025-01-21 08:08:12 +0000[0m - dagster - [34mDEBUG[0m - __ASSET_JOB - 6443b292-4a2e-4b98-9966-07757f8ebeeb - 231352 - global_weather - ASSET_MATERIALIZATION - Materialized value global_weather.
+[32m2025-01-21 08:08:12 +0000[0m - dagster - [34mDEBUG[0m - __ASSET_JOB - 6443b292-4a2e-4b98-9966-07757f8ebeeb - 231352 - global_weather - HANDLED_OUTPUT - Handled output "result" using IO manager "io_manager"
+[32m2025-01-21 08:08:13 +0000[0m - dagster - [34mDEBUG[0m - __ASSET_JOB - 6443b292-4a2e-4b98-9966-07757f8ebeeb - 231352 - global_weather - STEP_SUCCESS - Finished execution of step "global_weather" in 3.52s.

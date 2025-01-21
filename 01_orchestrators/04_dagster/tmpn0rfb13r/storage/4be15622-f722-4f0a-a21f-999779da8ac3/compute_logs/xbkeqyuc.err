@@ -1,0 +1,11 @@
+[32m2025-01-21 08:37:36 +0000[0m - dagster - [34mDEBUG[0m - __ASSET_JOB - 4be15622-f722-4f0a-a21f-999779da8ac3 - 280759 - LOGS_CAPTURED - Started capturing logs in process (pid: 280759).
+[32m2025-01-21 08:37:37 +0000[0m - dagster - [34mDEBUG[0m - __ASSET_JOB - 4be15622-f722-4f0a-a21f-999779da8ac3 - 280759 - setup_database - STEP_START - Started execution of step "setup_database".
+INFO:weather_project.assets:Creating database tables...
+INFO:weather_project.assets:Database tables created successfully.
+[32m2025-01-21 08:37:37 +0000[0m - dagster - [34mDEBUG[0m - __ASSET_JOB - 4be15622-f722-4f0a-a21f-999779da8ac3 - 280759 - setup_database - STEP_OUTPUT - Yielded output "result" of type "Any". (Type check passed).
+[32m2025-01-21 08:37:37 +0000[0m - dagster - [34mDEBUG[0m - __ASSET_JOB - 4be15622-f722-4f0a-a21f-999779da8ac3 - setup_database - Writing file at: /mnt/h/data_engineering/01_orchestrators/04_dagster/tmpn0rfb13r/storage/setup_database using PickledObjectFilesystemIOManager...
+INFO:alembic.runtime.migration:Context impl SQLiteImpl.
+INFO:alembic.runtime.migration:Will assume non-transactional DDL.
+[32m2025-01-21 08:37:39 +0000[0m - dagster - [34mDEBUG[0m - __ASSET_JOB - 4be15622-f722-4f0a-a21f-999779da8ac3 - 280759 - setup_database - ASSET_MATERIALIZATION - Materialized value setup_database.
+[32m2025-01-21 08:37:39 +0000[0m - dagster - [34mDEBUG[0m - __ASSET_JOB - 4be15622-f722-4f0a-a21f-999779da8ac3 - 280759 - setup_database - HANDLED_OUTPUT - Handled output "result" using IO manager "io_manager"
+[32m2025-01-21 08:37:39 +0000[0m - dagster - [34mDEBUG[0m - __ASSET_JOB - 4be15622-f722-4f0a-a21f-999779da8ac3 - 280759 - setup_database - STEP_SUCCESS - Finished execution of step "setup_database" in 2.3s.
